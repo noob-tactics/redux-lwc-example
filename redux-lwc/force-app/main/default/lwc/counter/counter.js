@@ -14,9 +14,11 @@ export default class Counter extends Redux(LightningElement) {
     connectedCallback(){
         console.log('Example line');
 
-        let counter = this.props.counter;
+        if(this.props.counter > 0){
+            console.log(this.props.counter);
+        }
 
-        this.props.increment();
+        
 
     }
 }
