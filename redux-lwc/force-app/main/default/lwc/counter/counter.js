@@ -10,4 +10,13 @@ export default class Counter extends Redux(LightningElement) {
     mapDispatchToProps(){
         return {increment, decrement, reset};
     }
+
+    connectedCallback(){
+        console.log('Example line');
+
+        let counter = this.props.counter;
+
+        this.props.increment();
+
+    }
 }
